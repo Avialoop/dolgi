@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Вход в аккаунт</title>
 </head>
 <body>
@@ -28,10 +29,43 @@
             </div>
 
             <div id="user-info" class="user-info" style="display: none;">
-                <h2 class="text-center">Добро пожаловать, <span id="user-name"></span>!</h2>
+                <div class="user-header text-center">
+                    <h2>Добро пожаловать, <span id="user-name"></span>!</h2>
+                </div>
                 <div class="balance-info text-center">
                     <h3>Баланс:</h3>
-                    <p class="balance" id="balance">-21</p>
+                    <p class="balance" id="balance">-21 Р</p>
+                </div>
+                <div class="user-actions">
+                    <button class="btn btn-success" onclick="showPayment()">Оплата услуг</button>
+                    <button class="btn btn-info" onclick="showTransfer()">Перевести деньги</button>
+                    <button class="btn btn-warning" onclick="showHistory()">История транзакций</button>
+                    <button class="btn btn-secondary" onclick="showSettings()">Настройки</button>
+                    <button class="btn btn-danger" onclick="logout()">Выход</button>
+                </div>
+
+                <div id="service-payment" class="hidden">
+                    <h4>Оплата услуг</h4>
+                    <input type="text" class="form-control" placeholder="Введите сумму" id="payment-amount">
+                    <button class="btn btn-primary" onclick="makePayment()">Заплатить</button>
+                </div>
+
+                <div id="money-transfer" class="hidden">
+                    <h4>Перевести деньги</h4>
+                    <input type="text" class="form-control" placeholder="Имя пользователя" id="transfer-username">
+                    <input type="text" class="form-control" placeholder="Сумма" id="transfer-amount">
+                    <button class="btn btn-primary" onclick="transferMoney()">Перевести</button>
+                </div>
+
+                <div id="transaction-history" class="hidden">
+                    <h4>История транзакций</h4>
+                    <ul id="transaction-list"></ul>
+                </div>
+
+                <div id="settings" class="hidden">
+                    <h4>Настройки</h4>
+                    <input type="password" class="form-control" placeholder="Новый пароль" id="new-password">
+                    <button class="btn btn-primary" onclick="changePassword()">Сохранить</button>
                 </div>
             </div>
         </div>

@@ -18,10 +18,16 @@ body, html {
     padding: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     width: 300px; /* Фиксированная ширина для карточки */
+    margin-bottom: 20px;
 }
 
 .user-info {
-    margin-top: 50px;
+    margin-top: 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .balance-info {
@@ -31,4 +37,21 @@ body, html {
 .balance {
     font-size: 2rem; /* Увеличенный размер шрифта для баланса */
     color: red; /* Красный цвет для отрицательного баланса */
+}
+
+.user-actions {
+    margin-top: 20px;
+}
+
+.user-actions .btn {
+    width: 100%; /* Ширина кнопок */
+    margin: 5px 0; /* Отступ между кнопками */
+}
+
+.hidden {
+    display: none; /* Скрывает элементы */
+}
+
+#service-payment, #money-transfer, #transaction-history, #settings {
+    margin-top: 20px;
 }

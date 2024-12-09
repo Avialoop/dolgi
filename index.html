@@ -8,36 +8,30 @@
     <title>Вход в аккаунт</title>
 </head>
 <body>
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-body">
-                <div id="login-form">
-                    <h2 class="text-center">Вход в аккаунт</h2>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="username" placeholder="Имя пользователя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="password" placeholder="Пароль" required>
-                    </div>
-                    <button class="btn btn-primary btn-block" onclick="login()">Войти</button>
-                    <p id="login-error" class="text-danger"></p>
+    <div class="background">
+        <div class="container">
+            <div class="login-card">
+                <h2 class="text-center">Вход в аккаунт</h2>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="username" placeholder="Имя пользователя" required>
                 </div>
-
-                <div id="admin-controls" style="display: none;">
-                    <h4 class="text-center">Регистрация пользователей</h4>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="new-username" placeholder="Новое имя пользователя" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="new-password" placeholder="Пароль" required>
-                    </div>
-                    <button class="btn btn-success" onclick="registerUser()">Зарегистрировать пользователя</button>
-                    <p id="register-error" class="text-danger"></p>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="Пароль" required>
                 </div>
+                <button class="btn btn-primary btn-block" onclick="login()">Войти</button>
+                <p id="login-error" class="text-danger"></p>
+                <div id="loading" class="text-center" style="display: none;">
+                    <div class="spinner-border" role="status">
+                        <span class="sr-only">Загрузка...</span>
+                    </div>
+                </div>
+            </div>
 
-                <div id="user-info" style="display: none;">
-                    <h2 class="text-center">Добро пожаловать, <span id="user-name"></span>!</h2>
-                    <p class="text-center">Баланс: <span id="balance" class="balance">0</span> рублей</p>
+            <div id="user-info" class="user-info" style="display: none;">
+                <h2 class="text-center">Добро пожаловать, <span id="user-name"></span>!</h2>
+                <div class="balance-info text-center">
+                    <h3>Баланс:</h3>
+                    <p class="balance" id="balance">-21</p>
                 </div>
             </div>
         </div>

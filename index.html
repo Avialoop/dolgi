@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Вход в аккаунт</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <div id="login-form">
+                    <h2 class="text-center">Вход в аккаунт</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" placeholder="Имя пользователя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" placeholder="Пароль" required>
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="login()">Войти</button>
+                    <p id="login-error" class="text-danger"></p>
+                    <p class="text-center">Нет аккаунта? <a href="#" onclick="showRegister()">Зарегистрируйтесь</a></p>
+                </div>
+
+                <div id="register-form" style="display: none;">
+                    <h2 class="text-center">Регистрация</h2>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="new-username" placeholder="Имя пользователя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="new-password" placeholder="Пароль" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="admin-username" placeholder="Имя администратора" required>
+                    </div>
+                    <button class="btn btn-success btn-block" onclick="register()">Зарегистрироваться</button>
+                    <p id="register-error" class="text-danger"></p>
+                    <p class="text-center">Уже есть аккаунт? <a href="#" onclick="showLogin()">Войдите</a></p>
+                </div>
+
+                <div id="user-info" style="display: none;">
+                    <h2 class="text-center">Добро пожаловать, <span id="user-name"></span>!</h2>
+                    <p class="text-center">Баланс: <span id="balance" class="balance">0</span> рублей</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

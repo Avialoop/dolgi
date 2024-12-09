@@ -1,0 +1,16 @@
+body {
+    background-color: #f0f4f8; /* Светлый фон */
+}
+
+.card {
+    border-radius: 10px; /* Закругленные углы карты */
+}
+
+.balance {
+    font-size: 1.5em; /* Увеличенный размер шрифта для баланса */
+    color: green; /* По умолчанию зелёный */
+}
+
+.balance.negative {
+    color: red; /* Если баланс отрицательный */
+}

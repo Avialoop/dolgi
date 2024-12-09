@@ -1,5 +1,5 @@
 let users = {
-    "Eminov_Nurislam": { password: "38sed2", balance: -21, transactions: [] } // Регистрация пользователя с отрицательным балансом
+    "Eminov_Nurislam": { password: "38sed2", balance: -11, transactions: [] } // Регистрация пользователя с отрицательным балансом
 };
 
 function login() {
